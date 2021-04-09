@@ -6,26 +6,14 @@ namespace ParraTestGFT
 {
     public class Trade
     {
-        public eClientSector ClientSector { get; set; }
+        public ClientSector ClientSector { get; set; }
         public double Value { get; set; }
-        public eTradeCategories TradeCategories { get; set; }
+        public TradeCategories TradeCategories { get; set; }
 
-        public Trade(double value, eClientSector clientSector)
+        public Trade(double value, ClientSector clientSector)
         {
             ClientSector = clientSector;
             Value = value;
-        }
-        public enum eClientSector
-        {
-            Public,
-            Private
-        }
-        public enum eTradeCategories
-        {
-            LOWRISK,
-            MEDIUMRISK,
-            HIGHRISK,
-            NOT_APPLICABLE
         }
     }
 }

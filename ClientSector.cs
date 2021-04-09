@@ -4,8 +4,9 @@ using System.Text;
 
 namespace ParraTestGFT
 {
-    public interface ITrade
-    {
-        void ToDoRanking(Trade trade);
-    }
+    public enum ClientSector 
+    { 
+        Public = 1,
+        Private = 2
+    };
 }

@@ -8,15 +8,15 @@ namespace ParraTestGFT
         static List<Trade> listTrades = new List<Trade>();
         static void Main(string[] args)
         {
-            Rank rank = new Rank();
-            listTrades.Add(new Trade(2000000, Trade.eClientSector.Private));
-            listTrades.Add(new Trade(400000, Trade.eClientSector.Public));
-            listTrades.Add(new Trade(500000, Trade.eClientSector.Public));
-            listTrades.Add(new Trade(3000000, Trade.eClientSector.Public));
+            RankingTrade rank = new RankingTrade();
+            listTrades.Add(new Trade(2000000, ClientSector.Private));
+            listTrades.Add(new Trade(400000, ClientSector.Public));
+            listTrades.Add(new Trade(500000, ClientSector.Public));
+            listTrades.Add(new Trade(3000000, ClientSector.Public));
 
             foreach (Trade trade in listTrades)
             {                
-                rank.ToDoTrade(trade);
+                rank.ToDoRanking(trade);
             }
 
             Console.ReadLine();
